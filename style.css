@@ -325,3 +325,16 @@ ul {
         padding-bottom: 75%; /* Соотношение сторон для мобильных устройств */
     }
 }
+
+/* Стиль для блока с датой и временем */
+#datetime {
+    position: absolute;
+    right: 20px; /* Отступ от правого края */
+    top: 20px; /* Отступ сверху */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #FFD700;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    padding: 5px 10px;
+    border-radius: 5px;
+}

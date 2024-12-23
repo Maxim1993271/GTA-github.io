@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grand Theft Auto: San Andreas</title>
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,16 +14,18 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-				<li><a href="urbanize.html">[SA] Urbanize</a></li>
-				<li><a href="mods.html">List of GTA San Andreas Mods</a></li>
-				<li><a href="Cheats.html">Cheats</a></li>
+                <li><a href="urbanize.html">[SA] Urbanize</a></li>
+                <li><a href="mods.html">List of GTA San Andreas Mods</a></li>
+                <li><a href="Cheats.html">Cheats</a></li>
                 <li><a href="https://gtaradio.net/ru/sa/">Sa Radio</a></li>
-				<li><a href="https://gtaradio.net/ru/vc/">VC Radio</a></li>
-				<li><a href="https://gtaradio.net/ru/3/">GTA III Radio</a></li>
+                <li><a href="https://gtaradio.net/ru/vc/">VC Radio</a></li>
+                <li><a href="https://gtaradio.net/ru/3/">GTA III Radio</a></li>
             </ul>
         </nav>
+        <!-- Новый блок для даты и времени -->
+        <div id="datetime"></div>
     </header>
-	
+    
     <main>
         <div class="container" id="home">
             <h2>Grand Theft Auto: San Andreas</h2>
@@ -32,15 +34,37 @@
             <p>Пять лет назад Карл Джонсон бежал из Los Santos – города преступлений, наркотиков и коррупции, где даже кинозвезды и миллионеры вынуждены любыми способами защищаться от вымогателей и бандитов.</p>
             <p>Начало 1990-х годов. Карл возвращается домой. Его мать убита, семья распалась, друзья попали в беду, а против него самого выдвинуто сфабрикованное обвинение в убийстве.</p>
             <p>Чтобы вернуть близких и восстановить былые связи, Карл отправляется в опасное турне по San Andreas: он должен во что бы то ни стало завоевать улицы.</p>
-			<div class="button-container" style="text-align: center;">
-            <a href="https://drive.google.com/file/d/1F1zNlon5nnLPgKoXNGGxJDIwuZQ2JqLv/view?usp=drive_link" download>
-                <button id="download-btn">Скачать</button>
-            </a>
+            <div class="button-container" style="text-align: center;">
+                <a href="https://drive.google.com/file/d/1F1zNlon5nnLPgKoXNGGxJDIwuZQ2JqLv/view?usp=drive_link" download>
+                    <button id="download-btn">Скачать</button>
+                </a>
+            </div>
         </div>
     </main>
 
     <button id="scroll-btn">⬆</button>
 
     <script src="script.js"></script>
+    <script>
+        // Функция для обновления времени и даты
+        function updateTime() {
+            var now = new Date();
+            var hours = String(now.getHours()).padStart(2, '0');
+            var minutes = String(now.getMinutes()).padStart(2, '0');
+            var seconds = String(now.getSeconds()).padStart(2, '0');
+            var day = now.getDate();
+            var month = now.getMonth() + 1; // Месяцы начинаются с 0
+            var year = now.getFullYear();
+
+            // Форматируем дату и время
+            var datetime = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+
+            // Отображаем в блоке с id="datetime"
+            document.getElementById('datetime').textContent = datetime;
+        }
+
+        // Обновляем время каждую секунду
+        setInterval(updateTime, 1000);
+    </script>
 </body>
 </html>
