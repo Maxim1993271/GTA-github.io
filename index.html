@@ -65,31 +65,35 @@
 <style>
     /* Основной стиль для кнопок */
     .download-btn {
-        background-color: #FFA500; /* Оранжевый цвет */
+        background-color: #FF8000; /* Основной оранжевый цвет */
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 12px 24px; /* Размеры кнопки */
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        border-radius: 8px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+        border-radius: 8px; /* Скруглённые углы */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Тень для объёмного эффекта */
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
         cursor: pointer;
     }
 
     /* Эффект при наведении на кнопку */
     .download-btn:hover {
-        background-color: #FF8C00; /* Более темный оранжевый при наведении */
-        transform: translateY(-5px); /* Немного поднимет кнопку */
+        background-color: #FF9C33; /* Светлый оранжевый при наведении */
+        transform: translateY(-4px); /* Лёгкое поднятие */
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Усиление тени */
     }
 
     /* Эффект нажатия на кнопку */
     .download-btn:active {
-        background-color: #FF7F00; /* Еще более темный оранжевый при нажатии */
-        transform: translateY(2px); /* Кнопка немного опускается */
+        background-color: #FF7000; /* Более насыщенный оранжевый */
+        transform: translateY(2px); /* Кнопка слегка опускается */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Тень уменьшается */
     }
 </style>
+
 
 
     <button id="scroll-btn">⬆</button>
