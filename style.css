@@ -141,75 +141,35 @@ main {
 }
 
 /* Стили для кнопки скачивания */
-#download-btn {
-    background-color: #ff9933;   /* Цвет кнопки (золотой) */
-    color: black;                 /* Цвет текста */
-    border: none;                 /* Убираем рамку */
-    padding: 12px 24px;          /* Увеличенные отступы для большей кликабельности */
-    border-radius: 8px;          /* Скругленные углы */
-    cursor: pointer;              /* Курсор в виде указателя */
-    font-size: 18px;             /* Увеличенный размер шрифта */
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Плавные переходы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для глубины */
-}
-
-#download-btn:hover {
-    background-color: #ff9933;   /* Цвет кнопки при наведении */
-    transform: translateY(-2px); /* Эффект "подъёма" кнопки */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
-}
-
-#download-btn:active {
-    transform: translateY(1px);   /* Эффект нажатия */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Сжатие тени при нажатии */
-}
-
-#download-btn:hover {
-    background-color: #ff9933;   /* Цвет кнопки при наведении */
-}
-
-/* Стили для кнопок */
 .download-btn {
     background-color: #ff9933;         /* Основной цвет кнопки */
     color: white;                       /* Цвет текста */
     border: none;                       /* Убираем рамку */
-    padding: 12px 20px;                 /* Увеличенные отступы для кнопки */
+    padding: 12px 24px;                 /* Увеличенные отступы для кнопки */
     border-radius: 8px;                 /* Скругленные углы */
-    cursor: pointer;                     /* Курсор в виде указателя */
-    font-size: 18px;                    /* Увеличенный размер шрифта */
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Плавные переходы */
-    margin: 20px 0;                     /* Отступы между кнопками */
-	display: block;                     /* Делаем кнопку блочным элементом */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для глубины */
-    width: calc(100% - 40px);          /* Ширина кнопки на 100% с отступами */
-    max-width: 300px;                   /* Максимальная ширина кнопки */
-}
-
-.download-btn {
-    background-color: #ff9933;          /* Основной цвет кнопки */
-    color: white;                       /* Цвет текста */
-    border: none;                       /* Убираем рамку */
-    padding: 12px 20px;                 /* Увеличенные отступы для кнопки */
-    border-radius: 8px;                 /* Скругленные углы */
-    cursor: pointer;                     /* Указатель курсора */
+    cursor: pointer;                    /* Курсор в виде указателя */
     font-size: 18px;                    /* Увеличенный размер шрифта */
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Плавные переходы */
     margin: 20px 0;                     /* Отступы между кнопками */
     display: block;                     /* Делаем кнопку блочным элементом */
-    width: calc(100% - 40px);          /* Ширина кнопки на 100% с отступами */
+    width: calc(100% - 40px);           /* Ширина кнопки на 100% с отступами */
     max-width: 300px;                   /* Максимальная ширина кнопки */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для глубины */
 }
 
+/* Эффект при наведении на кнопку */
 .download-btn:hover {
-    background-color: #ff9933;          /* Цвет кнопки при наведении */
+    background-color: #ff8533;         /* Цвет кнопки при наведении (слегка темнее оранжевый) */
     transform: translateY(-4px);        /* Эффект "подъёма" кнопки */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
 }
 
+/* Эффект нажатия на кнопку */
 .download-btn:active {
-    transform: translateY(2px);          /* Эффект нажатия */
+    transform: translateY(2px);         /* Эффект нажатия */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Сжатие тени при нажатии */
 }
+
 
 /* Медиа-запросы для адаптивности */
 @media (max-width: 600px) {
